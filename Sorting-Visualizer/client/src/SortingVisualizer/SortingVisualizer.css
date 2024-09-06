@@ -1,0 +1,111 @@
+/* SortingVisualizer.css */
+
+/* Gradient Background */
+body {
+  background: linear-gradient(to right, #4782E6, #8F54E9);
+  animation: gradientAnimation 20s ease infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.sorting-visualizer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.array-container {
+  display: flex;
+  align-items: flex-end;
+  height: 400px;
+  width: 100%;
+  background-color: transparent; /* Transparent background */
+}
+
+.array-bar {
+  width: 20px;
+  margin: 0 1px;
+  background-color: #FFD662; /* Vibrant color */
+}
+
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px; /* Rounded corners */
+  background-color: #FF5E5B; /* Vibrant color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+  background-color: #D33F49; /* Darker shade on hover */
+}
+
+.info-container {
+  margin-top: 30px;
+  background: linear-gradient(to bottom right, #FFF3E0, #FFB74D); /* Gradient background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.info-item {
+  padding: 30px;
+  border-radius: 20px;
+  background-color: #FFF; /* White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.info-item:hover {
+  transform: translateY(-5px); /* Lift up on hover */
+}
+
+.info-item h3 {
+  color: #553C9A; /* Accent color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.info-item p {
+  color: #333; /* Dark text color */
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.info-item ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+}
+
+.info-item li {
+  color: #FF5E5B; /* Colorful font */
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.info-item li::before {
+  content: '\2022'; /* Use a bullet symbol */
+  color: #FF5E5B; /* Same as font color */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
